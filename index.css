@@ -1,0 +1,272 @@
+/*loading fonts and resetting default styles*/
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*adding root style for light and darkmode*/
+:root{
+    color-scheme: light dark;
+}
+/*setting general styles*/
+h1{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+h2,h3{
+    font-size: 1.375rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    margin: 0;
+}
+h4{
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+h5{
+    font-size: 0.875rem;
+    font-family: 'Poppins',Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.5rem 0;
+    margin: 0;
+    
+}
+body{
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Poppins',Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #0e0e0e;
+    color: white;
+    position: relative;
+
+    /*navigation*/
+    nav{
+        
+        margin: 0;
+        padding: 0;
+        header{text-align: center;
+        font-family: "Edu NSW ACT Cursive", cursive;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-size: 0.5rem;
+        }
+        ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0.5rem 0;
+        font-size: 0.875rem;
+            li{
+                a{
+                text-decoration: none;
+                color: white;
+                }
+                a:hover{
+                background-image: linear-gradient(to right, #A76CFE,#FF72BA, #FFA274);
+                background-clip: text;
+                -webkit-background-clip: text; /* For older browsers */
+                color: transparent;
+                text-wrap: balance;
+                }
+            }
+        }
+        
+    
+    }
+    hr{
+    position: relative;
+    border-top: 1px solid rgba(255, 114, 186,0.8);
+    margin: 0;
+    }
+    /*main*/
+    main{
+        text-align: center;
+        position: relative;
+
+        div{
+            padding: 1.5rem 0;
+            /*styling the hero section for mobile*/
+            section.hero{
+            display:grid;
+            grid-template-columns: 2fr 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+            column-gap: 20px;
+            place-items: center; 
+            img.hero-img{
+                width: 200px;
+                box-sizing: border-box;
+                border-radius: 50%;
+                padding: 1rem;
+                border: 1px solid rgba(255, 162, 116,0.3);
+            }
+            div.icons{
+                a{
+                    img.svgg{
+                            padding: 0.5rem;
+                            box-sizing: border-box;
+                            max-width: 50px;  
+                    }
+                }
+            }
+            }
+
+            section.intro{
+                padding: 0.75rem 0;
+                font-family: "Edu NSW ACT Cursive", cursive;
+                font-optical-sizing: auto;
+                font-weight: 700;
+                h1{
+                    span{
+                        background-image: linear-gradient(to right, #A76CFE,#FF72BA, #FFA274);background-clip: text;
+                        -webkit-background-clip: text; 
+                        color: transparent;
+                        text-wrap: balance;
+                    }
+                }
+                p{
+                    text-transform: uppercase;
+                    font-size: 0.5rem;
+                    letter-spacing: 0.125rem;
+                    padding: 0.25rem 0.25rem;
+                    font-style: italic;
+                }
+            }
+        }
+        section#about-me{
+            text-align: left;
+            div.about{
+                padding: 0;
+            }
+        }
+        section.animations{
+            /*animations*/
+            position: relative;
+            overflow: hidden;
+            max-width: 1200px;
+            text-align: center;
+            padding: 0.5rem 0;
+            h2.animations-header{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                overflow-x: hidden;
+                z-index: 1;
+                background-color: #0e0e0e;
+                border-radius: 0.5rem;
+                padding: 0.5rem;
+                margin: 0;
+                }
+  
+                div.animations-text {
+                    white-space: nowrap;
+                    animation: moveDisappear 25s linear infinite;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center; 
+                    padding: 0;
+                    font-family: "Edu NSW ACT Cursive", cursive;
+                    font-optical-sizing: auto;
+                    font-weight: 500;
+                    span {
+                        /* Adjust spacing between animated texts */
+                        opacity: 1;
+                        background-image: linear-gradient(to right, #A76CFE,#FF72BA, #FFA274);
+                        background-clip: text;
+                        -webkit-background-clip: text; /* For older browsers */
+                        color: transparent;
+                        padding: 0.5rem;
+                        font-size: 0.75rem;
+                    }
+                }
+
+            }
+
+        
+        div.front-end{
+            text-align: left;
+            padding: 1.5rem 0.5rem;
+            max-width: 1200px;
+            position: relative;
+            z-index: 2;
+            min-height: 300px;
+            div.front{
+                padding: 1rem 0;
+                position: relative;
+                z-index: 2;
+                div.image-container{
+                    padding: 1rem;
+                    border-radius: 8px;
+                    box-sizing: border-box;
+                    position: relative;
+                    z-index: 2;
+                    border: 1px solid rgba(255, 162, 116,0.3);
+                    img.front-img{
+                        width: 100%;
+                    }
+                }
+                div{
+                    h3{
+                    font-size: 1.25rem;
+                    }
+                    div.links{
+                        padding: 0.5rem 0;
+                        display: flex;
+                        justify-content: space-between;
+                        a{
+                            button{
+                                padding: 0.375rem;
+                                border: 1px solid #FFA274;
+                                background-image: linear-gradient(to right, #A76CFE,#FF72BA, #FFA274);
+                                background-clip: text;
+                                -webkit-background-clip: text; /* For older browsers */
+                                color: transparent;
+                                text-wrap: balance;
+                                border-radius: 0.5rem;
+                                font-size: 0.875rem;
+                                text-transform: uppercase;
+                                &:hover{
+                                    border-color: #A76CFE;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+ 
+
+
+    }
+    /*footer*/
+    footer{
+    font-size: 0.75rem;
+    text-align: center;
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+}
+
+
+/*animation keyframes for skillset and certifications*/
+        @keyframes moveDisappear {
+            0% {
+                transform: translateX(50%);
+            }
+            25% {
+                transform: translateX(-100%);
+            }
+            50%,75% {
+                transform: translateX(-100%);
+            }
+            
+            100% {
+            transform: translateX(50%);
+            }
+        }
