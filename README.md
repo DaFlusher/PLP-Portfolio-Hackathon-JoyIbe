@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/DaFlusher/PLP-Portfolio-Hackathon-JoyIbe)
-- Live Site URL: [Add live site URL here](https://)
+- Live Site URL: [Add live site URL here](https://plp-portfolio-hackathon-joy-ibe.vercel.app/)
 
 ## My process
 
