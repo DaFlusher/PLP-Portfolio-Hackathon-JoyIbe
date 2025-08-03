@@ -103,13 +103,15 @@ body{
                 border-radius: 50%;
                 padding: 1rem;
                 border: 1px solid rgba(255, 162, 116,0.3);
+                animation: profile-pic 8s linear 1;
             }
             div.icons{
+                animation: icons 8s linear 1;
                 a{
                     img.svgg{
                             padding: 0.5rem;
                             box-sizing: border-box;
-                            max-width: 50px;  
+                            max-width: 50px; 
                     }
                 }
             }
@@ -120,6 +122,7 @@ body{
                 font-family: "Edu NSW ACT Cursive", cursive;
                 font-optical-sizing: auto;
                 font-weight: 700;
+                animation: intro-text 8s linear 1;
                 h1{
                     span{
                         background-image: linear-gradient(to right, #A76CFE,#FF72BA, #FFA274);background-clip: text;
@@ -137,10 +140,31 @@ body{
                 }
             }
         }
+        div.extra-web{
+            section#hero-web{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                place-items: center; 
+                min-height: 60vh;
+                img.hero-img-web{
+                width: 300px;
+                box-sizing: border-box;
+                border-radius: 50%;
+                padding: 1rem;
+                border: 1px solid rgba(255, 162, 116,0.3);
+                animation: profile-pic 8s linear 1;
+                }
+                section.icon-web{
+                    animation: icons 8s linear 1;
+                }
+            }
+            
+        }
         section#about-me{
             text-align: left;
+            padding: 0 0.5rem;
             div.about{
-                padding: 0;
+                padding: 0 ;
             }
         }
         section.animations{
@@ -154,7 +178,6 @@ body{
                 position: absolute;
                 top: 0;
                 left: 0;
-                z-index: 2;
                 overflow-x: hidden;
                 z-index: 1;
                 background-color: #0e0e0e;
@@ -165,7 +188,7 @@ body{
   
                 div.animations-text {
                     white-space: nowrap;
-                    animation: moveDisappear 25s linear infinite;
+                    animation: moveDisappear 25s linear infinite alternate;
                     display: flex;
                     justify-content: space-between;
                     align-items: center; 
@@ -174,11 +197,11 @@ body{
                     font-optical-sizing: auto;
                     font-weight: 500;
                     span {
-                        /* Adjust spacing between animated texts */
+                        /* Adjusting spacing between animated texts */
                         opacity: 1;
                         background-image: linear-gradient(to right, #A76CFE,#FF72BA, #FFA274);
                         background-clip: text;
-                        -webkit-background-clip: text; /* For older browsers */
+                        -webkit-background-clip: text; 
                         color: transparent;
                         padding: 0.5rem;
                         font-size: 0.75rem;
@@ -224,7 +247,7 @@ body{
                                 border: 1px solid #FFA274;
                                 background-image: linear-gradient(to right, #A76CFE,#FF72BA, #FFA274);
                                 background-clip: text;
-                                -webkit-background-clip: text; /* For older browsers */
+                                -webkit-background-clip: text; 
                                 color: transparent;
                                 text-wrap: balance;
                                 border-radius: 0.5rem;
@@ -259,14 +282,179 @@ body{
             0% {
                 transform: translateX(50%);
             }
-            25% {
+            25%,50%,70% {
                 transform: translateX(-100%);
             }
-            50%,75% {
-                transform: translateX(-100%);
-            }
-            
             100% {
             transform: translateX(50%);
             }
         }
+/*animating the hero section*/
+        @keyframes profile-pic {
+            0%{
+                transform: translateX(-100%);
+            }
+            50%{
+                transform: translateX(50%);
+            }
+            75%{
+                transform: rotateY(180deg);
+            }
+            100%{
+                transform: translateX(0%);
+                
+            }
+        }
+
+        @keyframes icons {
+            0%{
+                transform: translateX(100%)
+            }
+            25%{
+                transform: translateX(25%);
+            }
+            75%{
+                transform: rotateY(180deg);
+            }
+            100%{
+                transform: translateX(0%);
+            }
+        } 
+
+        @keyframes intro-text {
+            0%{
+                transform: translateX(100%)
+            }
+            25%{
+                transform: translateX(25%)
+            }
+            75%{
+                transform: rotateY(180deg);
+            }
+            100%{
+                transform: translateX(0%);
+            }
+        }
+    
+/*Responsive styling*/
+/*media queries*/
+
+/*the intro section*/
+@media (min-width:749px){
+    nav{
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        
+        header.daflusher{
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            align-self: start;
+            text-align: left;
+        }
+        ul.navbar{
+            padding: 0.5rem 0;
+        }
+        .nav-link{
+            font-size: 1rem;
+        }
+    }
+    div.front{
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        column-gap: 20px;
+        place-items: center;
+    }
+    div.extra{
+        display: none;
+    }
+    ul{
+        font-size: 1rem;
+    }
+    section.hero-web{
+        grid-template-columns:repeat(2,1fr);
+        place-content: center;
+        max-width: 960px;
+        min-height: 80vh;
+    }
+    
+    section.icon-web{
+       grid-column: span 2;
+       display: grid;
+       grid-template-columns: repeat(4,60px);
+       column-gap: 1rem;
+       
+    }
+  
+    
+ }
+ 
+@media (max-width:748px){
+    div.extra-web{
+        display: none;
+    }
+}
+
+/*frontend */
+
+@media (min-width:960px){
+    body{
+        padding: 1rem 4rem;
+    }
+    div.front{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+        padding: 2rem 0;
+    }
+    button.repo{
+        padding:  2rem;
+    }
+    h1{
+        font-size: 2rem;
+        line-height: 2.75rem;
+    }
+    h2{
+        font-size: 1.75rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+   .hero-img{
+    text-align: left;
+   }
+   
+   div.front p{
+    font-size: 1.125rem;
+    }
+
+    h5{
+        font-size: 1rem;
+    }
+
+   p.intro-paragraph{
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
+    padding: 0.5rem 0.25rem;
+    }
+    .animation-span{
+        font-size: 2rem;
+    }
+
+}
+
+/*light and darkmode*/
+@media (prefers-color-scheme: light){
+    body{
+        background-color: #f2eae0;
+        color: #0e0e0e;
+    }
+    .nav-link{
+        color: #0e0e0e;
+    }
+    .animations{
+        color: #0e0e0e;
+    }
+    .animations-header{
+        color: white;
+    }
+    
+}
